@@ -1,6 +1,6 @@
-> make sure to download the right versions of all the tools and libraries in our Requirements page.>
+> make sure to download the right versions of all the tools and libraries in our Requirements page.
  
-> you may have to reset unity during the steps.>
+> you may have to reset unity during the steps.
 
 # How to setup android on unity:
 1) download and install unity
@@ -36,11 +36,16 @@ open the command line at this folder and go to the bin folder using  - cd bin
 
 the run these commands -
 
-sdkmanager build-tools;23.0.0
+./sdkmanager build-tools;23.0.0
 
-sdkmanager extras;google;usb_driver
+./sdkmanager extras;google;usb_driver
 
-sdkmanager platform-tools
+./sdkmanager platform-tools
+
+make sure your phone is connected! you need to run the command adb devices in the bin folder as well.
+if you do not have premission use this https://developer.android.com/studio/run/device.html#connect
+
+also run ./sdkmanager "lldb;2.3"
 
 **C)Android NDK(Native Development Kit) - [Android NDK download link]**(https://developer.android.com/ndk/downloads/index.html#stable-downloads)
 
@@ -57,6 +62,10 @@ and fill the path of the Development Kits' location according to the specified D
 
 7)Download the Google VR SDK for Unity through this link - [Download](https://developers.google.com/vr/unity/download)
 After the downloading run the installer. In the installer it will open you a window inside Unity, click import.
+
+###OR### 
+
+Open Unity Assets -> import package -> custom package. And click on the package in the location you download it to.
 
 This will set your google cardboard option in the VR support, and will add the GVR Assets.
 
